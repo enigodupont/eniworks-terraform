@@ -1,0 +1,4 @@
+resource "aws_key_pair" "eniworks" {
+  key_name   = "eniworks"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDmitAG2IPdhBsqCcmI70Jd8frjDN///aPx1nfe9g1jeezofI12AWiLmK6tNW72ELxZ3sN8O8QVhRg0a9EkuiDwsmsqljKuhVixOIwDZZhIM8H90bgWCcdotJ5hOCJR/qGZSOxqTHXObu6PUpGoheyvTgSt1UlWz9+vg/nmYNS/DpDuXNN7NIXpUwfGZ982Jm/kjcAbFjfETQXXSUN+lV7UdIh7Y+yzQJEFGv2cHs49VrtNXD206jde+vDwNev4IB/c8qPynVXLjwPcrDoRiMSt3XkiTQhSdazbIY/fRphOCN9oArY+fYiaY9lTJCjXjuK0y2A0j+L43atRzhiVe5F7"
+}
