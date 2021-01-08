@@ -1,7 +1,7 @@
 output "DNS" {
-  value = aws_instance.web.public_dns
+  value = aws_instance.eniworks.public_dns
 }
 
-output "HTML" {
-  value = "http://${aws_instance.web.public_dns}"
+output "IP" {
+  value = aws_instance.eniworks.public_ip
 }

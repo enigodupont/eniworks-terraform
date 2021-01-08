@@ -1,4 +1,4 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "eniworks" {
   ami                         = data.aws_ami.ubuntu.id
   instance_type               = "t2.micro"
   associate_public_ip_address = true
@@ -11,10 +11,15 @@ resource "aws_instance" "web" {
                   apt-get update
                   apt-get upgrade
                   apt-get -y install haproxy
+                  hostnamectl set-hostname eniworks.net
                   EOF
   vpc_security_group_ids = [aws_security_group.eniworks.id]
+
+  tags = {
+    Name = "eniworks.net"
+  }
 }
 
 resource "aws_eip" "lb" {
-  instance = aws_instance.web.id
+  instance = aws_instance.eniworks.id
 }
